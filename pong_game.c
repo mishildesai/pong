@@ -49,8 +49,8 @@ int scorePlayer = 0, scorePlayer2 = 0;
 int maxScore = 5;
 char playerInput, input = 'n';
 
-int main (void) {
-
+void init (void) {
+	
 	initscr();  /* initialize the curses library */
 	start_color();
   	cbreak();   /* take input chars one at a time*/
@@ -73,6 +73,12 @@ int main (void) {
 	yPosPlayer2 = maxY - 1;
 	xPosProjectile = maxX / 2;
 	yPosProjectile = maxY / 2;
+	
+}
+
+int main (void) {
+	
+	init();
 
 	while (1) {
 
